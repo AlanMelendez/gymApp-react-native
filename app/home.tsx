@@ -27,8 +27,8 @@ const home = () => {
 
         <View className="flex justify-center items-center space-y-2">
            <Image className="rounded-full" source={require("../assets/images/avatar.png")} style={{height: hp(8), width: hp(8)}}/>
-          <View className="flex items-center justify-center rounded-full px-2 py-1 bg-neutral-200">
-              <Ionicons name="checkmark-circle" size={32} color="green" />
+          <View className="flex items-center justify-center rounded-full px-2 py-1 bg-neutral-100 border-[3px] border-neutral-200" style={{height: hp(5.5), width: hp(5.5)}}>
+              <Ionicons name="notifications-circle" size={hp(3)} color="green" />
           </View>
         </View>
       </View>
