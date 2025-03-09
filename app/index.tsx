@@ -6,6 +6,8 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
+import Animated, { FadeIn, FadeInDown, FadeOut, FadeOutDown } from 'react-native-reanimated';
+
 
 import "../global.css";
 import { useNavigation } from "expo-router";
@@ -31,7 +33,7 @@ export default function Home() {
         end={{ x: 0.5, y: 0.8 }}
         className="flex justify-end pb-12 space-y-8"
       >
-        <View className="flex items-center mb-8">
+        <Animated.View entering={FadeIn.delay(1300).springify()} className="flex items-center mb-8">
           <Text
             className="text-white font-bold uppercase text-center tracking-wide"
             style={{ fontSize: hp(2.5) }}
@@ -47,9 +49,9 @@ export default function Home() {
             Our App
             <Text className="text-red-700"> AI Gym Assistant</Text>
           </Text>
-        </View>
+        </Animated.View>
 
-        <View className="flex items-center">
+        <Animated.View entering={FadeInDown.delay(1000).springify()} className="flex items-center">
           <TouchableOpacity
             // onPress={() => navigation.navigate("Login")}
             className="bg-red-800 py-4 px-6 rounded-full w-[70%] flex items-center justify-center mx-auto shadow-lg"
@@ -58,7 +60,7 @@ export default function Home() {
               Get Started
             </Text>
             </TouchableOpacity>
-         </View>
+         </Animated.View> 
       </LinearGradient>
     </View>
   );
