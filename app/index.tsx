@@ -10,7 +10,7 @@ import Animated, { FadeIn, FadeInDown, FadeOut, FadeOutDown } from 'react-native
 
 
 import "../global.css";
-import { useNavigation } from "expo-router";
+import { Link, useNavigation } from "expo-router";
 
 export default function Home() {
   const navigation = useNavigation();
@@ -53,11 +53,13 @@ export default function Home() {
 
         <Animated.View entering={FadeInDown.delay(1000).springify()} className="flex items-center">
           <TouchableOpacity
-            // onPress={() => navigation.navigate("Login")}
+               
+             //onPress={() => navigation.navigate("home")}
             className="bg-red-800 py-4 px-6 rounded-full w-[70%] flex items-center justify-center mx-auto shadow-lg"
             >
             <Text className="text-white font-bold uppercase text-center tracking-wide" style={{ fontSize: hp(2) }}>
               Get Started
+              <Link href="/home" > Now</Link>
             </Text>
             </TouchableOpacity>
          </Animated.View> 
