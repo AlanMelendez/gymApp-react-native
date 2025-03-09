@@ -7,6 +7,7 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import Ionicons from '@expo/vector-icons/Ionicons';
+import ImageSlider from "../components/ImageSlider";
 
 
 const home = () => {
@@ -31,6 +32,11 @@ const home = () => {
               <Ionicons name="notifications-circle" size={hp(3)} color="green" />
           </View>
         </View>
+      </View>
+
+
+      <View >
+        <ImageSlider />
       </View>
 
     

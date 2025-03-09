@@ -54,6 +54,20 @@ The login page allows users to securely sign in to their accounts. It features a
 
 ![Login Page Screenshot](./assets/images/screenshots/login.png)
 
+## Observations
+You need install next package to the carousel for this way:
+
+** NOTE IMPORTANT **
+Need change extension file "ImageSlider.tsx" to "ImageSlider.jsx"
+
+```bash
+   yarn add react-native-snap-carousel @types/react-native-snap-carousel
+
+   yarn android
+
+```
+
+
 ## Contributing
 
 If you would like to contribute to the project, please fork the repository and submit a pull request.
